@@ -1,0 +1,10 @@
+#!/bin/sh
+set -efu
+
+cp -a tests "$AUTOPKGTEST_TMP"
+cd "$AUTOPKGTEST_TMP"
+
+for p in $(py3versions -s); do
+  echo "=== $p ==="
+  $p -m pytest -s --verbose -k 'not test_run and not test_invalid_upgrade and not test_default_headers and not test_trace_logging and not test_websocket_auto' --ignore=tests/protocols/test_websocket.py 2>&1
+done

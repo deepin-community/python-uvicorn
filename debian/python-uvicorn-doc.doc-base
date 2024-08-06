@@ -1,0 +1,8 @@
+Document: python-uvicorn-doc
+Title: uvicorn Documentation
+Author: Tom Christie <tom@tomchristie.com>
+Section: Programming/Python
+
+Format: HTML
+Index: /usr/share/doc/python-uvicorn-doc/html/index.html
+Files: /usr/share/doc/python-uvicorn-doc/html/*.html

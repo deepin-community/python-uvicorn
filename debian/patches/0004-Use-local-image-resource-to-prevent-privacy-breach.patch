@@ -1,0 +1,56 @@
+From: Michael Fladischer <fladi@debian.org>
+Date: Wed, 9 Aug 2023 12:04:54 +0000
+Subject: Use local image resource to prevent privacy breach.
+
+---
+ docs/contributing.md             | 4 ++--
+ docs/index.md                    | 2 +-
+ docs/overrides/partials/nav.html | 2 +-
+ 3 files changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/docs/contributing.md b/docs/contributing.md
+index 194ce83..b770c14 100644
+--- a/docs/contributing.md
++++ b/docs/contributing.md
+@@ -110,7 +110,7 @@ If the test suite fails, you'll want to click through to the
+ "Details" link, and try to identify why the test suite failed.
+ 
+ <p align="center" style="margin: 0 0 10px">
+-  <img src="https://raw.githubusercontent.com/encode/uvicorn/master/docs/img/gh-actions-fail.png" alt='Failing PR commit status'>
++  <img src="../img/gh-actions-fail.png" alt='Failing PR commit status'>
+ </p>
+ 
+ Here are some common ways the test suite can fail:
+@@ -118,7 +118,7 @@ Here are some common ways the test suite can fail:
+ ### Check Job Failed
+ 
+ <p align="center" style="margin: 0 0 10px">
+-  <img src="https://raw.githubusercontent.com/encode/uvicorn/master/docs/img/gh-actions-fail-check.png" alt='Failing GitHub action lint job'>
++  <img src="../img/gh-actions-fail-check.png" alt='Failing GitHub action lint job'>
+ </p>
+ 
+ This job failing means there is either a code formatting issue or type-annotation issue.
+diff --git a/docs/index.md b/docs/index.md
+index 9f4095b..9953366 100644
+--- a/docs/index.md
++++ b/docs/index.md
+@@ -1,5 +1,5 @@
+ <p align="center">
+-  <img width="320" height="320" src="../../uvicorn.png" alt='uvicorn'>
++  <img width="320" height="320" src="uvicorn.png" alt='uvicorn'>
+ </p>
+ 
+ <p align="center">
+diff --git a/docs/overrides/partials/nav.html b/docs/overrides/partials/nav.html
+index 93d5c8c..472d265 100644
+--- a/docs/overrides/partials/nav.html
++++ b/docs/overrides/partials/nav.html
+@@ -47,7 +47,7 @@
+ 
+    <ul class="md-nav__list" data-md-scrollfix style="padding-top: 15px; padding-left: 10px">
+      <div>
+-       <a href="https://fastapi.tiangolo.com"><img src="/sponsors/fastapi.png" width=150px style=></img></a>
++       <a href="https://fastapi.tiangolo.com"><img src="../../sponsors/fastapi.png" width=150px style=></img></a>
+      </div>
+    </ul>
+  </nav>
