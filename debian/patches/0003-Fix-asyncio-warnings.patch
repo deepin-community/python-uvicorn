@@ -1,0 +1,25 @@
+From: Andreas Tille <tille@debian.org>
+Date: Wed, 9 Aug 2023 11:12:51 +0000
+Subject: fix asyncio warnings
+
+Bug-Debian: https://bugs.debian.org/1008457
+Forwarded: https://github.com/encode/uvicorn/issues/1439
+Last-Update: Mon, 04 Apr 2022 13:13:00 +0200
+---
+ pyproject.toml | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/pyproject.toml b/pyproject.toml
+index ca34a1e..2fad86d 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -81,6 +81,9 @@ module = "tests.*"
+ disallow_untyped_defs = false
+ check_untyped_defs = true
+ 
++[tool.pytest]
++asyncio_mode = "strict"
++
+ [tool.pytest.ini_options]
+ addopts = "-rxXs --strict-config --strict-markers"
+ xfail_strict = true

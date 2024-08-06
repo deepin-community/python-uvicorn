@@ -1,0 +1,4 @@
+0001-Disable-material-theme-for-mkdocs-use-default-one.patch
+0002-Remove-image-badges-to-prevent-privacy-breaches.patch
+0003-Fix-asyncio-warnings.patch
+0004-Use-local-image-resource-to-prevent-privacy-breach.patch

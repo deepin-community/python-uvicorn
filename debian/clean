@@ -1,0 +1,11 @@
+uvicorn.egg-info/PKG-INFO
+uvicorn.egg-info/SOURCES.txt
+uvicorn.egg-info/dependency_links.txt
+uvicorn.egg-info/entry_points.txt
+uvicorn.egg-info/requires.txt
+uvicorn.egg-info/top_level.txt
+.pytest_cache/README.md
+.pytest_cache/CACHEDIR.TAG
+.pytest_cache/v/cache/nodeids
+.pytest_cache/v/cache/stepwise
+uvicorn.1

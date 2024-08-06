@@ -1,0 +1,6 @@
+Tests: unittests
+Depends:
+ python3-all,
+ @,
+ @builddeps@,
+Restrictions: allow-stderr

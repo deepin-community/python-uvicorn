@@ -1,0 +1,57 @@
+From: Michael Fladischer <FladischerMichael@fladi.at>
+Date: Sun, 21 Oct 2018 13:31:39 +0200
+Subject: Disable material theme for mkdocs, use default one.
+
+---
+ mkdocs.yml | 38 +++++++++++++++++++-------------------
+ 1 file changed, 19 insertions(+), 19 deletions(-)
+
+diff --git a/mkdocs.yml b/mkdocs.yml
+index 2869183..5dbd2f0 100644
+--- a/mkdocs.yml
++++ b/mkdocs.yml
+@@ -1,25 +1,25 @@
+ site_name: Uvicorn
+ site_description: The lightning-fast ASGI server.
+ 
+-theme:
+-  name: material
+-  custom_dir: docs/overrides
+-  logo: uvicorn.png
+-  favicon: uvicorn.png
+-  palette:
+-    - scheme: "default"
+-      media: "(prefers-color-scheme: light)"
+-      toggle:
+-        icon: "material/lightbulb"
+-        name: "Switch to dark mode"
+-    - scheme: "slate"
+-      media: "(prefers-color-scheme: dark)"
+-      primary: "blue"
+-      toggle:
+-        icon: "material/lightbulb-outline"
+-        name: "Switch to light mode"
+-  features:
+-    - content.code.copy
++#theme:
++#  name: material
++#  custom_dir: docs/overrides
++#  logo: uvicorn.png
++#  favicon: uvicorn.png
++#  palette:
++#    - scheme: "default"
++#      media: "(prefers-color-scheme: light)"
++#      toggle:
++#        icon: "material/lightbulb"
++#        name: "Switch to dark mode"
++#    - scheme: "slate"
++#      media: "(prefers-color-scheme: dark)"
++#      primary: "blue"
++#      toggle:
++#        icon: "material/lightbulb-outline"
++#        name: "Switch to light mode"
++#  features:
++#    - content.code.copy
+ 
+ repo_name: encode/uvicorn
+ repo_url: https://github.com/encode/uvicorn
