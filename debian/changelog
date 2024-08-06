@@ -1,5 +1,259 @@
-template-repository (1.0-1) unstable; urgency=medium
+python-uvicorn (0.30.3-1) unstable; urgency=low
 
-  * Initial release
+  * New upstream version 0.30.3
+  * Refresh patches.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Michael Fladischer <fladi@debian.org>  Mon, 22 Jul 2024 19:01:33 +0000
+
+python-uvicorn (0.30.1-1) unstable; urgency=low
+
+  * New upstream version 0.30.1
+  * Remove __pycache__ artifact from documentation.
+  * Use $(CURDIR) in d/rules.
+  * Skip network-dependant tests during build.
+  * Refresh patches and drop httpx compatibility patch.
+
+ -- Michael Fladischer <fladi@debian.org>  Thu, 18 Jul 2024 07:56:58 +0000
+
+python-uvicorn (0.29.0-1) unstable; urgency=low
+
+  * New upstream version 0.29.0
+
+ -- Michael Fladischer <fladi@debian.org>  Wed, 27 Mar 2024 16:34:10 +0000
+
+python-uvicorn (0.28.0-1) unstable; urgency=low
+
+  * New upstream version 0.28.0
+  * Refresh patches.
+  * Skip test_socket_bind as it requires network.
+  * Add patch for compatibility with httpx 0.27.0 (Closes: #1066793).
+
+ -- Michael Fladischer <fladi@debian.org>  Sat, 16 Mar 2024 23:28:43 +0000
+
+python-uvicorn (0.27.1-1) unstable; urgency=low
+
+  * New upstream version 0.27.1
+  * Refresh patches.
+  * Replace python3-watchgod with python3-watchfiles.
+
+ -- Michael Fladischer <fladi@debian.org>  Tue, 20 Feb 2024 14:06:59 +0000
+
+python-uvicorn (0.27.0-1) unstable; urgency=low
+
+  * New upstream version 0.27.0
+
+ -- Michael Fladischer <fladi@debian.org>  Fri, 26 Jan 2024 10:36:18 +0000
+
+python-uvicorn (0.26.0-1) unstable; urgency=low
+
+  * New upstream version 0.26.0
+  * Remove Files-Excluded from d/copyright, no longer needed.
+  * Refresh patches.
+  * Update year in d/copyright.
+
+ -- Michael Fladischer <fladi@debian.org>  Fri, 19 Jan 2024 16:47:13 +0000
+
+python-uvicorn (0.25.0-1) unstable; urgency=low
+
+  * New upstream version 0.25.0
+
+ -- Michael Fladischer <fladi@debian.org>  Fri, 29 Dec 2023 20:32:35 +0000
+
+python-uvicorn (0.24.0-1) unstable; urgency=medium
+
+  * New upstream version 0.24.0
+  * Refresh patches.
+  * Add python3-httptools to Build-Depends, unlocks more tests.
+
+ -- Michael Fladischer <fladi@debian.org>  Mon, 06 Nov 2023 14:36:30 +0000
+
+python-uvicorn (0.23.2+dfsg-2) unstable; urgency=medium
+
+  * Use help2man to generate up-to-date man page, drop docbook-to-man.
+  * Simplify d/rules by using execute_ targets instead of overrides.
+
+ -- Michael Fladischer <fladi@debian.org>  Tue, 22 Aug 2023 13:00:29 +0000
+
+python-uvicorn (0.23.2+dfsg-1) unstable; urgency=medium
+
+  [ Andreas Tille ]
+  * Forwarded patch
+
+  [ Michael Fladischer ]
+  * New upstream version 0.23.2+dfsg
+  * Exclude docs/js from source tarball, it is not used and only provided in
+    minified form.
+  * Refresh patches.
+  * Build using pybuild-plugin-pyproject and python3-hatchling.
+  * Remove python3-asgiref and python3-httptools from Build-Depends, no longer
+    used.
+  * Add python3-a2wsgi to Build-Depends, required to build.
+  * Add patch to disable gitter chat in documentation.
+  * Add python3-pymdownx to Build-Depends, required by documentation.
+  * Bump Standards-Version to 4.6.2.
+  * Update year in d/copyright.
+  * Install testfiles using d/pybuild.testfiles.
+  * Run autopkgtests with all available Python3 versions, not only the
+    requested ones.
+  * Extend patch to use local image resource to prevent privacy breach.
+  * Depend on python3-all for autopkgtests.
+  * Run wrap-and-sort -bast to reduce diff size of future changes.
+  * Remove gzipped sitemap.xml, not useful for offline documentation.
+
+ -- Michael Fladischer <fladi@debian.org>  Wed, 09 Aug 2023 16:27:28 +0000
+
+python-uvicorn (0.17.6-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version
+  * Standards-Version: 4.6.0 (routine-update)
+  * Add salsa-ci file (routine-update)
+  * fix asyncio warnings
+    Closes: #1008457
+
+ -- Andreas Tille <tille@debian.org>  Mon, 04 Apr 2022 13:41:27 +0200
+
+python-uvicorn (0.15.0-2) unstable; urgency=medium
+
+  * debian/tests/
+    - add autopkgtests
+
+ -- Sandro Tosi <morph@debian.org>  Wed, 01 Dec 2021 00:01:56 -0500
+
+python-uvicorn (0.15.0-1) unstable; urgency=medium
+
+  * New upstream release; Closes: #997476
+  * debian/watch
+    - fix watch file
+  * debian/patches/0003-Remove-image-badges-to-prevent-privacy-breaches.patch
+    - refresh patch
+  * debian/control
+    - add asgiref, dotenv, pytest-asyncio anyio to b-d, needed by tests
+    - bump Standards-Version to 4.6.0.1 (no changes needed)
+  * debian/rules
+    - run tests at build-time
+
+ -- Sandro Tosi <morph@debian.org>  Thu, 25 Nov 2021 00:24:31 -0500
+
+python-uvicorn (0.13.3-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Update Maintainer field with new Debian Python Team
+    contact address.
+  * d/control: Update Vcs-* fields with new Debian Python Team Salsa
+    layout.
+
+  [ Sandro Tosi ]
+  * New upstream release
+    - Closes: #969275 CVE-2020-7695
+    - Closes: #969276 CVE-2020-7694
+  * debian/control
+    - run wrap-and-sort
+    - add httpx, pytest-mock, trustme to b-d, needed for tests
+    - bump Standards-Version to 4.5.1 (no changes needed)
+
+ -- Sandro Tosi <morph@debian.org>  Fri, 08 Jan 2021 23:00:04 -0500
+
+python-uvicorn (0.11.5-1) unstable; urgency=low
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+
+  [ Michael Fladischer ]
+  * New upstream release.
+  * Refresh patches.
+  * Add python-watchgod to Build-Depends.
+  * Skip test_trace_logging tests module, as it currently deadlocks.
+  * Add patch to remove remote image shields to prevent privacy issues.
+  * Bump debhelper version to 13.
+
+ -- Michael Fladischer <fladi@debian.org>  Thu, 16 Jul 2020 21:03:18 +0200
+
+python-uvicorn (0.11.3-1) unstable; urgency=low
+
+  * New upstream release.
+  * Refresh patches.
+  * Bump Standards-Version to 4.5.0.
+
+ -- Michael Fladischer <fladi@debian.org>  Tue, 25 Feb 2020 21:21:52 +0100
+
+python-uvicorn (0.11.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * Refresh patches.
+
+ -- Michael Fladischer <fladi@debian.org>  Thu, 23 Jan 2020 14:12:52 +0100
+
+python-uvicorn (0.11.1-1) unstable; urgency=low
+
+  [ Ondřej Nový ]
+  * Use debhelper-compat instead of debian/compat.
+  * Bump Standards-Version to 4.4.0.
+  * Bump Standards-Version to 4.4.1.
+
+  [ Michael Fladischer ]
+  * New upstream release.
+  * Refresh patches.
+  * Skip test_default_headers tests as they require network.
+  * Clean up .pytest_cache/CACHEDIR.TAG to allow two builds in a row.
+  * Set Rules-Requires-Root: no.
+
+ -- Michael Fladischer <fladi@debian.org>  Sat, 28 Dec 2019 15:58:41 +0100
+
+python-uvicorn (0.3.24-1) unstable; urgency=low
+
+  * New upstream release.
+  * Refresh patches.
+  * Bump debhelper compatibility and version to 12.
+  * Bump Standards-Version to 4.3.0.
+  * Add Enhances: python3-gunicorn to indicate that python3-uvicorn
+    provides a worker class implementation for it.
+
+ -- Michael Fladischer <fladi@debian.org>  Sun, 06 Jan 2019 17:23:11 +0100
+
+python-uvicorn (0.3.23-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Michael Fladischer <fladi@debian.org>  Sun, 23 Dec 2018 18:14:06 +0100
+
+python-uvicorn (0.3.22-2) unstable; urgency=medium
+
+  * Team upload.
+  * Use dh_mkdocs instead of manually symlinking static files.
+  * Prevent search_index.json from being compressed.
+
+ -- Dmitry Shachnev <mitya57@debian.org>  Sat, 22 Dec 2018 22:53:48 +0300
+
+python-uvicorn (0.3.22-1) unstable; urgency=low
+
+  [ Dmitry Shachnev ]
+  * Drop unused dh_sphinxdoc override, this package does not use Sphinx.
+
+  [ Michael Fladischer ]
+  * New upstream release.
+  * Refresh patches.
+  * Clean up files in .pytest_cache/ to allow two builds in a row.
+  * Do not mention planned HTTP/2 support in long description.
+
+ -- Michael Fladischer <fladi@debian.org>  Tue, 18 Dec 2018 09:13:42 +0100
+
+python-uvicorn (0.3.21-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Michael Fladischer <fladi@debian.org>  Thu, 22 Nov 2018 09:34:38 +0100
+
+python-uvicorn (0.3.20-1) unstable; urgency=low
+
+  * New upstream release.
+  * Add debian/gbp.conf.
+
+ -- Michael Fladischer <fladi@debian.org>  Wed, 14 Nov 2018 16:56:42 +0100
+
+python-uvicorn (0.3.14-1) unstable; urgency=low
+
+  * Initial release (Closes: #911549).
+
+ -- Michael Fladischer <fladi@debian.org>  Sun, 21 Oct 2018 12:31:34 +0200
